@@ -77,7 +77,7 @@ class MainWin(QMainWindow):
         self.autoupdate.timeout.connect(self.readdata)
         self.autoupdate.start(10)
         self.ui.pushButton_send.setEnabled(True)
-        return serial.Serial(self.com, self.baud, timeout=1)
+        return serial.Serial(self.com, self.baud, timeout=0.1)
 
     def closeconnection(self):
         self.con.close()
