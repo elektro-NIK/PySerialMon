@@ -2,4 +2,4 @@
 Arduino-like serial monitor
 
 Features:
-- Auto detect Arduino board
+- Auto detect serial adapters
