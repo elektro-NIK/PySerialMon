@@ -35,6 +35,29 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="pushButton_update">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>34</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/update.svg</normaloff>icons/update.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label_description">
          <property name="text">
           <string>None</string>
@@ -163,8 +186,17 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_send">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Send</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -225,6 +257,7 @@
     </item>
    </layout>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources/>
  <connections>
