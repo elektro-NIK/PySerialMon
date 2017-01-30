@@ -65,22 +65,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_newline">
-         <property name="maximumSize">
-          <size>
-           <width>99</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Newline</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QComboBox" name="comboBox_baud">
          <property name="minimumSize">
           <size>
@@ -185,6 +169,33 @@
         <widget class="QLineEdit" name="lineEdit_input"/>
        </item>
        <item>
+        <widget class="QComboBox" name="comboBox_lineend">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>No ()</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NL (\n)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CR (\r)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CR+NL (\r\n)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="pushButton_send">
          <property name="enabled">
           <bool>false</bool>
@@ -208,10 +219,16 @@
       <property name="readOnly">
        <bool>true</bool>
       </property>
+      <property name="centerOnScroll">
+       <bool>false</bool>
+      </property>
      </widget>
     </item>
     <item>
      <widget class="QFrame" name="frame_outctrl">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
       </property>
@@ -221,6 +238,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QCheckBox" name="checkBox_autoscroll">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
          <property name="text">
           <string>Autoscroll</string>
          </property>
@@ -241,16 +261,6 @@
           </size>
          </property>
         </spacer>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox_pagemode">
-         <property name="text">
-          <string>Page mode</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
        </item>
       </layout>
      </widget>
