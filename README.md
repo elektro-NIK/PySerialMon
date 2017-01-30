@@ -2,4 +2,7 @@
 Arduino-like serial monitor
 
 Features:
-- Auto detect serial adapters
+- Auto detecting serial adapters
+- Baud speed selection
+- Line ending
+- Autoscroll
