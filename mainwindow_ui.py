@@ -118,6 +118,13 @@ class Ui_MainWindow(object):
         self.comboBox_lineend.setCurrentIndex(1)
         self.lineEdit_input.returnPressed.connect(self.pushButton_send.click)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.comboBox_device, self.pushButton_update)
+        MainWindow.setTabOrder(self.pushButton_update, self.comboBox_baud)
+        MainWindow.setTabOrder(self.comboBox_baud, self.lineEdit_input)
+        MainWindow.setTabOrder(self.lineEdit_input, self.comboBox_lineend)
+        MainWindow.setTabOrder(self.comboBox_lineend, self.pushButton_send)
+        MainWindow.setTabOrder(self.pushButton_send, self.plainTextEdit_output)
+        MainWindow.setTabOrder(self.plainTextEdit_output, self.checkBox_autoscroll)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -132,7 +139,7 @@ class Ui_MainWindow(object):
         self.comboBox_baud.setItemText(6, _translate("MainWindow", "28800"))
         self.comboBox_baud.setItemText(7, _translate("MainWindow", "57600"))
         self.comboBox_baud.setItemText(8, _translate("MainWindow", "115200"))
-        self.label_baud.setText(_translate("MainWindow", "baud"))
+        self.label_baud.setText(_translate("MainWindow", "&baud"))
         self.comboBox_lineend.setItemText(0, _translate("MainWindow", "No ()"))
         self.comboBox_lineend.setItemText(1, _translate("MainWindow", "NL (\\n)"))
         self.comboBox_lineend.setItemText(2, _translate("MainWindow", "CR (\\r)"))

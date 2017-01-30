@@ -143,7 +143,7 @@
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="text">
-          <string>baud</string>
+          <string>&amp;baud</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -269,6 +269,16 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
+ <tabstops>
+  <tabstop>comboBox_device</tabstop>
+  <tabstop>pushButton_update</tabstop>
+  <tabstop>comboBox_baud</tabstop>
+  <tabstop>lineEdit_input</tabstop>
+  <tabstop>comboBox_lineend</tabstop>
+  <tabstop>pushButton_send</tabstop>
+  <tabstop>plainTextEdit_output</tabstop>
+  <tabstop>checkBox_autoscroll</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -278,12 +288,12 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>209</x>
-     <y>34</y>
+     <x>221</x>
+     <y>94</y>
     </hint>
     <hint type="destinationlabel">
-     <x>417</x>
-     <y>34</y>
+     <x>467</x>
+     <y>95</y>
     </hint>
    </hints>
   </connection>
