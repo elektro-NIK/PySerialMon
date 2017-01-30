@@ -25,7 +25,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="comboBox_device">
          <property name="maximumSize">
           <size>
            <width>135</width>
@@ -35,14 +35,20 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="label_description">
          <property name="text">
           <string>None</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="newLine">
+        <widget class="QCheckBox" name="checkBox_newline">
+         <property name="maximumSize">
+          <size>
+           <width>99</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="text">
           <string>Newline</string>
          </property>
@@ -52,11 +58,17 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="baud">
+        <widget class="QComboBox" name="comboBox_baud">
          <property name="minimumSize">
           <size>
            <width>0</width>
            <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>99</width>
+           <height>16777215</height>
           </size>
          </property>
          <property name="editable">
@@ -113,7 +125,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="label_baud">
          <property name="maximumSize">
           <size>
            <width>35</width>
@@ -147,10 +159,10 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLineEdit" name="input"/>
+        <widget class="QLineEdit" name="lineEdit_input"/>
        </item>
        <item>
-        <widget class="QPushButton" name="send">
+        <widget class="QPushButton" name="pushButton_send">
          <property name="text">
           <string>Send</string>
          </property>
@@ -160,7 +172,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPlainTextEdit" name="output">
+     <widget class="QPlainTextEdit" name="plainTextEdit_output">
       <property name="readOnly">
        <bool>true</bool>
       </property>
@@ -176,7 +188,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QCheckBox" name="autoscroll">
+        <widget class="QCheckBox" name="checkBox_autoscroll">
          <property name="text">
           <string>Autoscroll</string>
          </property>
@@ -199,7 +211,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QCheckBox" name="pageMode">
+        <widget class="QCheckBox" name="checkBox_pagemode">
          <property name="text">
           <string>Page mode</string>
          </property>
@@ -217,9 +229,9 @@
  <resources/>
  <connections>
   <connection>
-   <sender>input</sender>
+   <sender>lineEdit_input</sender>
    <signal>returnPressed()</signal>
-   <receiver>send</receiver>
+   <receiver>pushButton_send</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
